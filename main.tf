@@ -34,6 +34,7 @@ resource "aws_security_group" "security_jenkins_grp" {
  }
 }
 
+# Create AWS ec2 instance
 resource "aws_instance" "myFirstInstance" {
  ami            = var.ami_id
  key_name       = var.key_name
