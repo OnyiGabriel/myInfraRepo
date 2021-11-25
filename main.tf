@@ -4,7 +4,7 @@ provider "aws" {
 
 #Create security group with firewall rules
 resource "aws_security_group" "security_jenkins_grp" {
- name         = var.security_group
+ name          = var.security_group
  description   = "my-jenkins-security-group"
 
  ingress {
