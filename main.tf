@@ -35,7 +35,7 @@ resource "aws_security_group" "security_jenkins_grp" {
 }
 
 # Create AWS ec2 instance
-resource "aws_instance" "my-ec2-instance" {
+resource "aws_instance" "myFirstInstance" {
  ami            = var.ami_id
  key_name       = var.key_name
  instance_type  = var.instance_type
@@ -46,7 +46,7 @@ resource "aws_instance" "my-ec2-instance" {
 }
 
 # Create Elastic IP address
-resource "aws_eip" "my-ec2-instance" {
+resource "aws_eip" "myFirstInstance" {
  vpc      = true
  instance = aws_instance.myFirstInstance.id
  tags= {
